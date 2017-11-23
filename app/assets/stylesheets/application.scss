@@ -1,0 +1,88 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "bootstrap";
+
+header {
+    margin-bottom: 25px;
+}
+
+.time {
+    width: 8%;
+    font-size: 0.9em;
+}
+button {
+    cursor: pointer;
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+    font-size: 0.75em;
+}
+a {
+    color: #000000;
+    pointer-events: none;
+    cursor: default;
+}
+
+.busy {
+    background-color: #D1ECF1;
+}
+
+.busy:hover {
+    background-color: rgb(104, 172, 184);
+}
+
+.center-block {
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+ }
+ .list-group-item-info {
+     background-color: #ffffff;
+ }
+
+*, *:before, *:after {
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Nunito', sans-serif;
+color: #384047;
+}
+
+table {
+    max-width: 960px;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+th {
+    background: #7e8892;
+    color: #FFF;
+}
+
+tr {
+    background: #d4d4d4;
+    border-bottom: 1px solid #FFF;
+    margin-bottom: 5px;
+}
+
+th, td {
+    text-align: left;
+    padding: 20px;
+    font-weight: 300;
+}
+  

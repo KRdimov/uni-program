@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FDIBA INF 2015 PROGRAM</title>
+    <%= csrf_meta_tags %>
+    <link rel="icon" href="https://image.flaticon.com/icons/png/512/45/45945.png">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "program", "data-turbolinks-track" => true %>
+  </head>
+
+  <body>
+    <div class="container h-100">
+      <header>
+        <nav class="navbar navbar-toggleable-md sticky-top navbar-dark bg-dark">
+          <h1 class="navbar-brand mb-0"><b>INF 2015</b> - Нашата университетска програмка</h1>
+        </nav>
+      </header>
+      <%= yield %>
+    </div>
+  </body>
+  <script>
+    
+  </script>
+</html>
