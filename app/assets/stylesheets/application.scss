@@ -19,7 +19,13 @@ header {
     margin-bottom: 25px;
 }
 
-.time {
+@media screen and (max-width: 768px) {
+    h1{
+        font-size:14px !important;
+    }
+}
+
+time {
     width: 8%;
     font-size: 0.9em;
 }

@@ -96,6 +96,6 @@ function clearSubjects() {
 
   function scrollToLoading() {
     $('html, body').animate({
-      scrollTop: $("#program").offset().top
+      scrollTop: $(document).height();
     }, 1000);
   }
