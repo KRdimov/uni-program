@@ -35,7 +35,9 @@ module ProgramExtractor
         tables = []
         groups.each do |group|
             table = ProgramExtractor.getHtmlHelperBlock(week, group, TABLE)
-            tables.push(table)
+            unless table.nil? || table.empty?
+                tables.push(table)
+            end
         end
 
         return TableBuilder.buildSubjectTable(tables, subject)
