@@ -31,7 +31,7 @@ function loadSubjectsHandler() {
     showLoading("Създаване на програма за дисциплината");
     scrollToLoading();
     $.ajax({
-      url: "https://uniprogram-186910.appspot.com/program/show/" + valueSelected,
+      url: "/program/show/" + valueSelected,
       headers: { 'week':  $('select[name=week]').val()},
       type: "get",
       success: function(data) {
@@ -56,7 +56,7 @@ $( document ).ready(function() {
       showLoading("Извличане на дисциплините за седмицата");
       disableSelect();
       $.ajax({
-        url: "https://uniprogram-186910.appspot.com/program/subjects/" + valueSelected,
+        url: "/program/subjects/" + valueSelected,
         type: "get",
         success: function(data) {
           clearSubjects();
