@@ -6,7 +6,8 @@ module SubjectHelper
     end
 
     def SubjectHelper.wrapSubjects(subjects)
-        subjects_html = "<div class='list-group' role='group'><p><b>Избери Дисциплина</b></p>"
+        message = (subjects.nil? || subjects.empty?) ? "Няма Дисциплини" : "Избери Дисциплина"
+        subjects_html = "<div class='list-group' role='group'><p><b>#{message}</b></p>"
         subjects.each do |subject|
             subject = subject.strip
             subjects_html += "<button type='button' class='list-group-item list-group-item-info' value='#{subject}'>#{subject}</button>"
