@@ -17,7 +17,9 @@ module ProgramExtractor
             busy_tds.each do |td|
                 subject_messy = HtmlHelper.getInnerText(td).to_s
                 subject_clean = SubjectHelper.extractSubject(subject_messy)
-                subjects.add(subject_clean)
+                unless subject_clean.nil? || subject_clean.empty?
+                    subjects.add(subject_clean)
+                end
             end
         end
 
