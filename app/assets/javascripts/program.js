@@ -51,6 +51,7 @@ $( document ).ready(function() {
   $('select[name=week]').change(function(){
     var valueSelected = this.value;
     if(valueSelected) {
+      disableInitSelectVal();
       clearSubjects();
       clearProgram();
       showLoading("Извличане на дисциплините за седмицата");
@@ -98,4 +99,8 @@ function scrollToLoading() {
   $('html, body').animate({
     scrollTop: $(document).height()
   }, 1000);
+}
+
+function disableInitSelectVal() {
+  $('select[name=week]').find("option:first-child").prop('disabled', true);
 }

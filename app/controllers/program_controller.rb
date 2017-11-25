@@ -6,7 +6,7 @@ class ProgramController < ApplicationController
       @weeks = WeeksExtractor.getWeeks.html_safe
   end
 
-  def subjects()
+  def subjects
       groups = GroupsExtractor.getGroups("INF 2015")
       subjects = ProgramExtractor.getSubjects(params['week'], groups)
       render html: subjects.html_safe
